@@ -18,7 +18,7 @@ function AppContent(){
     <>
      <Nav/>
      <Routes>
-       <Route path='/' element={<LandingPage />} exat={true} />
+       <Route path='/' element={<LandingPage />} exact={true} />
      </Routes>
      <Footer/>
     </>
