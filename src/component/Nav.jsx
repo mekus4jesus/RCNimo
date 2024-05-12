@@ -71,13 +71,12 @@ const Nav = () => {
           aria-label='Toggle navigation'
           position='absolute'
           right='1'
-          top='25%'
+          top='50%'
           display={displayIconButton}
-          icon={isOpen ? <CloseIcon  color='#fff'/> : <HamburgerIcon />}
+          icon={isOpen ? <CloseIcon  color='#fff'/> : <HamburgerIcon  color='#fff'/>}
           onClick={isOpen ? onClose : onOpen}
           variant='ghost'
           color='white'
-          _hover={{ color: '#D72B35' }}
         />
         <UnorderedList
           sx={{
