@@ -70,10 +70,10 @@ const Nav = () => {
         <IconButton
           aria-label='Toggle navigation'
           position='absolute'
-          right='0'
-          top='0'
+          right='1'
+          top='25%'
           display={displayIconButton}
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          icon={isOpen ? <CloseIcon  color='#fff'/> : <HamburgerIcon />}
           onClick={isOpen ? onClose : onOpen}
           variant='ghost'
           color='white'
