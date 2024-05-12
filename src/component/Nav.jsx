@@ -71,7 +71,7 @@ const Nav = () => {
           aria-label='Toggle navigation'
           position='absolute'
           right='1'
-          top='50%'
+          top='25%'
           display={displayIconButton}
           icon={isOpen ? <CloseIcon  color='#fff'/> : <HamburgerIcon  color='#fff'/>}
           onClick={isOpen ? onClose : onOpen}
