@@ -1,8 +1,9 @@
-import { Box, IconButton, Image, Link, ListItem, UnorderedList, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
+import { Box,IconButton, Image, Link, ListItem, UnorderedList, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
 import { Link as RouterLink } from 'react-router-dom';
 import Logo from '../assets/img/logo.jpg';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { useState, useEffect, useRef } from 'react';
+import { ModalComponent } from './Modal';
 
 const Nav = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -57,7 +58,8 @@ const Nav = () => {
   const ImgBoxSize = useBreakpointValue({ base: '60px', md: '80px', lg: '80px' });
 
   return (
-    <nav>
+    <>
+     <nav>
       <Box style={navStyle} p={4} color='white'>
         <header>
           <Image
@@ -112,14 +114,17 @@ const Nav = () => {
             <Link href='#'>Gallery</Link>
           </ListItem>
           <ListItem>
-            <Link href='#'>Needs Prayers ?</Link>
+            <Link href="https://wa.me/+23407089221883" target="_blank">
+               Needs Prayers ?
+               </Link>
           </ListItem>
           <ListItem>
-            <Link href='#'>Donates</Link>
+           <ModalComponent />
           </ListItem>
         </UnorderedList>
       </Box>
     </nav>
+    </>
   );
 }
 

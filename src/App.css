@@ -26,6 +26,29 @@ li{
   font-weight: bolder;
   text-shadow: 1px 2px rgb(0,0,0.3);
 }
+button.donate{
+  font-family: var(--primaryFont);
+  font-size: var(--navfont);
+  font-weight: bolder;
+  text-shadow: 1px 2px rgb(0,0,0.3);
+}
+ button.donate:hover{
+  text-decoration: none;
+  color:#D72B35;
+}
+.modalHeader h4{
+  font-size: 1.6rem;
+}
+.modalHeader h4, .modalBody h5{
+  font-family: var(--secondaryFont);
+}
+.modalBody h5{
+  font-size:1.4rem;
+}
+.modalBody{
+  font-family: var(--primaryFont);
+  font-size: 1.125rem;
+}
 .center{
   display: flex;
   align-items: center;

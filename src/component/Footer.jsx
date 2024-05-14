@@ -49,6 +49,9 @@ const Footer = () => {
               <Link href='#words'>Words From Point Man</Link>
             </ListItem>
             <ListItem>
+            <Link href='#JoinUs' >Join our Platform</Link>
+          </ListItem>
+            <ListItem>
               <Link href=''>Gallery</Link>
             </ListItem>
             <ListItem>
