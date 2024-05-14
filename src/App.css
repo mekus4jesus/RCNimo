@@ -131,8 +131,8 @@ q{
   }
   .aboutText{
     width:100%;
-    /* text-align: center; */
-    text-align: left;
+    text-align: center;
+    /* text-align: left; */
     margin: 0 auto;
     padding: 1rem;
   }
