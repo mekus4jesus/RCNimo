@@ -6,9 +6,7 @@
   --secondaryFont: Markazi Text,serif;
   --navfont: 1.125rem;
 }
-body{
-  overflow-x: hidden;
-}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 12.3em;
@@ -138,6 +136,9 @@ q{
 }
 
  @media (max-width:740px) {
+  body{
+    overflow-x: hidden;
+  }
    nav ul{
     display: block;
     background-color:#504d5f;
