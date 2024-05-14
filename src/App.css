@@ -11,7 +11,7 @@ body{
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 12em;
+  scroll-padding-top: 12.3em;
 }
 
 
@@ -131,7 +131,8 @@ q{
   }
   .aboutText{
     width:100%;
-    text-align: center;
+    /* text-align: center; */
+    text-align: justify;
     margin: 0 auto;
     padding: 1rem 3rem;
   }

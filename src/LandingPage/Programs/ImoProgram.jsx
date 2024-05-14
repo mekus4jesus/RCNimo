@@ -26,7 +26,7 @@ const ImoProgram = () => {
           </Box>
           <Box className="programs" w={programWidth}>
             <Heading as='h1'>
-            Sister Shift
+            Sister Summit
             </Heading>
             <Text>Every 3rd Wednesday by 5pm - 7pm</Text>
           </Box>

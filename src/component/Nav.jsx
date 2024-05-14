@@ -23,6 +23,7 @@ const Nav = () => {
   const aboutRef = useRef(null);
   const programsRef = useRef(null);
   const wordsRef = useRef(null);
+  const joinUsRef = useRef(null);
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -71,7 +72,7 @@ const Nav = () => {
           aria-label='Toggle navigation'
           position='absolute'
           right='1'
-          top='50%'
+          top='25%'
           display={displayIconButton}
           icon={isOpen ? <CloseIcon  color='#fff'/> : <HamburgerIcon  color='#fff'/>}
           onClick={isOpen ? onClose : onOpen}
@@ -103,6 +104,9 @@ const Nav = () => {
           </ListItem>
           <ListItem>
             <Link href='#words' ref={wordsRef}>Words From Point Man</Link>
+          </ListItem>
+          <ListItem>
+            <Link href='#JoinUs' ref={joinUsRef}>Join our Platform</Link>
           </ListItem>
           <ListItem>
             <Link href='#'>Gallery</Link>
