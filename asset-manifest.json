@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/RCNimo/static/css/main.cf37e026.css",
+    "main.css": "/RCNimo/static/css/main.d0673477.css",
     "main.js": "/RCNimo/static/js/main.ed2cc35b.js",
     "static/js/453.954909f4.chunk.js": "/RCNimo/static/js/453.954909f4.chunk.js",
     "static/media/Apostleandwife.png": "/RCNimo/static/media/Apostleandwife.603f0fed8db0a547af23.png",
@@ -11,12 +11,12 @@
     "static/media/logo.jpg": "/RCNimo/static/media/logo.e3a2f56eaf12829dd96a.jpg",
     "static/media/zenith.jpg": "/RCNimo/static/media/zenith.5c47eef075656f07de73.jpg",
     "index.html": "/RCNimo/index.html",
-    "main.cf37e026.css.map": "/RCNimo/static/css/main.cf37e026.css.map",
+    "main.d0673477.css.map": "/RCNimo/static/css/main.d0673477.css.map",
     "main.ed2cc35b.js.map": "/RCNimo/static/js/main.ed2cc35b.js.map",
     "453.954909f4.chunk.js.map": "/RCNimo/static/js/453.954909f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf37e026.css",
+    "static/css/main.d0673477.css",
     "static/js/main.ed2cc35b.js"
   ]
 }
