@@ -132,9 +132,9 @@ q{
   .aboutText{
     width:100%;
     /* text-align: center; */
-    text-align: justify;
+    text-align: left;
     margin: 0 auto;
-    padding: 1rem 3rem;
+    padding: 1rem;
   }
   .program{
     margin: 0 auto;

@@ -29,6 +29,7 @@ const JoinUs = () => {
             Join our telegram group to get the latest information on RCNimo and Messages by Apostle Sorochi Adiuku
            </Text>
            <Button 
+           className='btn'
            aria-label='button'
            size={isSize} 
            bgColor='#483E7E' 
