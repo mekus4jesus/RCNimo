@@ -74,16 +74,23 @@ const Footer = () => {
           <Heading as='h4'>Socials</Heading>
            <Box className="socials" display='flex' gap={3}>
               <Box className="social">
-                <Icon as={MdFacebook}  boxSize={IconSize}/>
+                <Link href='https://web.facebook.com/rcnimoofficial' target='_blank'><Icon as={MdFacebook}  boxSize={IconSize}/>
+                </Link>
               </Box>
               <Box className="social">
+                <Link href='https://www.youtube.com/@rcnimo' target='_blank'>
                 <Icon as={IoLogoYoutube}  boxSize={IconSize}/>
+                </Link>
               </Box>
               <Box className="social">
+                <Link href="#">
                 <Icon as={IoLogoWhatsapp} boxSize={IconSize}/>
+                </Link>
               </Box>
               <Box className="social">
+                <Link href="https://t.me/RCN_IMO" target='_blank'>
                 <Icon as={SiTelegram} boxSize={IconSize} />
+                </Link>
               </Box>
            </Box>
         </Box>
