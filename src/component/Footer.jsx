@@ -5,6 +5,7 @@ import { HiHome } from 'react-icons/hi'
 import { MdEmail, MdFacebook } from 'react-icons/md'
 import { IoLogoWhatsapp, IoLogoYoutube } from 'react-icons/io'
 import { SiTelegram } from 'react-icons/si'
+import { ModalComponent } from './Modal'
 
 const Footer = () => {
   const ImgBoxSize =  useBreakpointValue({base: '60px', md: '80px',lg: '80px'})
@@ -55,11 +56,11 @@ const Footer = () => {
               <Link href=''>Gallery</Link>
             </ListItem>
             <ListItem>
-              <Link href=''>Needs Prayers ?</Link>
+              <Link href="https://wa.me/+23407089221883" target="_blank">Needs Prayers ?</Link>
             </ListItem>
             <ListItem>
-              <Link href=''>Donates</Link>
-            </ListItem>
+           <ModalComponent />
+          </ListItem>
         </UnorderedList>
         </Box>
         <Box className="footer">

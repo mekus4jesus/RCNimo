@@ -10,7 +10,7 @@ export const ModalComponent = () => {
   return (
     <>
       <Button className='donate' colorScheme='white' variant='link'    onClick={onOpen} >
-               Donates
+               Donate
     </Button>
    <Modal  blockScrollOnMount={false} isOpen={isOpen} onClose={onClose} scrollBehavior={scrollBehavior}>
     <ModalOverlay />

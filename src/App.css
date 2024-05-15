@@ -126,7 +126,7 @@ q{
   font-family: var(--secondaryFont);
   font-size: 1.8rem;
 }
-.footer a{
+.footer a, button.donate{
   font-family: var(--secondaryFont);
   font-size: 1.4rem;
 }
@@ -184,6 +184,7 @@ q{
    .footer a{
     font-size: 1.2rem;
   }
+ 
 
   }
 
