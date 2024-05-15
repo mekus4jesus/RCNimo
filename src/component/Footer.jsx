@@ -68,7 +68,7 @@ const Footer = () => {
         <Heading as='h5'>Prayer Tent:</Heading> 
         <Text className='address'> <Icon as={ HiHome}  color='#fff' boxSize={4}/> 29 Oduobi Crescent Behind Destiny Supermarket Ikenegbu Layout Owerri</Text>
         <Text className="email"><Icon as={MdEmail}  boxSize={4}/> RcnImo@gmail.com</Text>
-        <Text className='telnumber'><PhoneIcon /> +2348065439187 || +23409012273375</Text>
+        <Text className='telnumber'><PhoneIcon /> +2348065438187 || +23409012273375</Text>
         </Box>
         <Box className="footer">
           <Heading as='h4'>Socials</Heading>
