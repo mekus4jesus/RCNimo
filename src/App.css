@@ -122,6 +122,14 @@ q{
   position: absolute;
   top: 110%;
 }
+.copyRight{
+  font-family: var(--primaryFont);
+  background-color: #251864;
+  color: #fff;
+  font-size: 1.125rem;
+  padding: 1rem 4rem;
+
+}
 .footer h4{
   font-family: var(--secondaryFont);
   font-size: 1.8rem;
@@ -153,6 +161,10 @@ q{
   .setMan{
     margin: 0 auto;
   }
+  .about h1{
+    font-size: 2rem;
+  font-weight: 400;
+  }
   .aboutText{
     width:100%;
     text-align: center;
@@ -183,6 +195,9 @@ q{
    }
    .footer a{
     font-size: 1.2rem;
+  }
+  .copyRight{
+    text-align: center;
   }
  
 

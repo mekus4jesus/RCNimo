@@ -1,5 +1,5 @@
-import { Box,IconButton, Image, Link, ListItem, UnorderedList, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Box, IconButton, Image, Link, ListItem, UnorderedList, useBreakpointValue, useDisclosure } from '@chakra-ui/react';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import Logo from '../assets/img/logo.jpg';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { useState, useEffect, useRef } from 'react';
@@ -8,6 +8,7 @@ import { ModalComponent } from './Modal';
 const Nav = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isNavFixed, setIsNavFixed] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,9 +34,17 @@ const Nav = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleGalleryClick = (event) => {
+    event.preventDefault();
+    scrollToTop();
+    setTimeout(() => {
+      navigate('/gallery');
+    }, 500); // Adjust the timeout to match the scroll duration
+  };
+
   const navStyle = useBreakpointValue({
     base: {
-      position:'relative',
+      position: 'relative',
       width: '100%',
       flexDirection: 'column',
       background: 'linear-gradient(to left,#0F0155, transparent)',
@@ -59,71 +68,69 @@ const Nav = () => {
 
   return (
     <>
-     <nav>
-      <Box style={navStyle} p={4} color='white'>
-        <header>
-          <Image
-            boxShadow='md'
-            borderRadius='full'
-            boxSize={ImgBoxSize}
-            src={Logo}
-            alt='Remnant Christian Network Imo Logo'
+      <nav>
+        <Box style={navStyle} p={4} color='white'>
+          <header>
+            <Image
+              boxShadow='md'
+              borderRadius='full'
+              boxSize={ImgBoxSize}
+              src={Logo}
+              alt='Remnant Christian Network Imo Logo'
+            />
+          </header>
+          <IconButton
+            aria-label='Toggle navigation'
+            position='absolute'
+            right='1'
+            top='25%'
+            display={displayIconButton}
+            icon={isOpen ? <CloseIcon color='#fff' /> : <HamburgerIcon color='#fff' />}
+            onClick={isOpen ? onClose : onOpen}
+            variant='ghost'
+            color='white'
           />
-        </header>
-        <IconButton
-          aria-label='Toggle navigation'
-          position='absolute'
-          right='1'
-          top='25%'
-          display={displayIconButton}
-          icon={isOpen ? <CloseIcon  color='#fff'/> : <HamburgerIcon  color='#fff'/>}
-          onClick={isOpen ? onClose : onOpen}
-          variant='ghost'
-          color='white'
-        />
-        <UnorderedList
-          sx={{
-            listStyleType: 'none',
-            '> li > a': {
-              textDecoration: 'none',
-              transition: 'color 0.3s ease-in-out',
-              _hover: {
+          <UnorderedList
+            sx={{
+              listStyleType: 'none',
+              '> li > a': {
                 textDecoration: 'none',
-                color: '#D72B35'
-              }
-            },
-            display: displayNavList,
-          }}
-        >
-          <ListItem>
-            <Link as={RouterLink} to='/' onClick={scrollToTop}> Home</Link>
-          </ListItem>
-          <ListItem>
-            <Link href='#about' ref={aboutRef}> About RCN</Link>
-          </ListItem>
-          <ListItem>
-            <Link href='#programs' ref={programsRef}>Programs </Link>
-          </ListItem>
-          <ListItem>
-            <Link href='#words' ref={wordsRef}>Words From Point Man</Link>
-          </ListItem>
-          <ListItem>
-            <Link href='#JoinUs' ref={joinUsRef}>Join our Platform</Link>
-          </ListItem>
-          <ListItem>
-            <Link href='#'>Gallery</Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://wa.me/+23407089221883" target="_blank">
-               Needs Prayers ?
-               </Link>
-          </ListItem>
-          <ListItem>
-           <ModalComponent />
-          </ListItem>
-        </UnorderedList>
-      </Box>
-    </nav>
+                transition: 'color 0.3s ease-in-out',
+                _hover: {
+                  textDecoration: 'none',
+                  color: '#D72B35'
+                }
+              },
+              display: displayNavList,
+            }}
+          >
+            <ListItem>
+              <Link as={RouterLink} to='/' onClick={scrollToTop}>Home</Link>
+            </ListItem>
+            <ListItem>
+              <Link href='#about' ref={aboutRef}>About RCN</Link>
+            </ListItem>
+            <ListItem>
+              <Link href='#programs' ref={programsRef}>Programs</Link>
+            </ListItem>
+            <ListItem>
+              <Link href='#words' ref={wordsRef}>Words From Point Man</Link>
+            </ListItem>
+            <ListItem>
+              <Link href='#JoinUs' ref={joinUsRef}>Join our Platform</Link>
+            </ListItem>
+            <ListItem>
+              <Link onClick={handleGalleryClick}>Gallery</Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://wa.me/+23407089221883" target="_blank">Needs Prayers?</Link>
+            </ListItem>
+            <ListItem>
+              <ModalComponent />
+            </ListItem>
+          </UnorderedList>
+        </Box>
+      </nav>
     </>
   );
 }

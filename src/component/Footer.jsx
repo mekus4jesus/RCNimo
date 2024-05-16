@@ -3,7 +3,7 @@ import Logo from '../assets/img/logo.jpg'
 import { PhoneIcon } from '@chakra-ui/icons'
 import { HiHome } from 'react-icons/hi'
 import { MdEmail, MdFacebook } from 'react-icons/md'
-import { IoLogoWhatsapp, IoLogoYoutube } from 'react-icons/io'
+import { IoLogoYoutube } from 'react-icons/io'
 import { SiTelegram } from 'react-icons/si'
 import { ModalComponent } from './Modal'
 
@@ -11,9 +11,10 @@ const Footer = () => {
   const ImgBoxSize =  useBreakpointValue({base: '60px', md: '80px',lg: '80px'})
   const footerdisplay = useBreakpointValue({base:'block', md:'flex', lg:'flex'})
   const IconSize = useBreakpointValue({base: 5, md: 10, lg: 10})
+  const date = new Date().getFullYear()
   return (
-    <footer aria-label='footer'>
-        <Box bg='#251864' w='100%'  color='white' mt='9rem' p='4rem 5rem' className='footers' display={footerdisplay} justifyContent='space-between'>
+    <footer aria-label='footer' >
+        <Box bg='#251864' w='100%'  color='white'  p='4rem 5rem' className='footers' display={footerdisplay} justifyContent='space-between'>
         <Box className='footer'>
         <Image 
         boxSize={ImgBoxSize}
@@ -67,7 +68,8 @@ const Footer = () => {
         <Heading as='h4'> Contact </Heading>
         <Heading as='h5'>Prayer Tent:</Heading> 
         <Text className='address'> <Icon as={ HiHome}  color='#fff' boxSize={4}/> 29 Oduobi Crescent Behind Destiny Supermarket Ikenegbu Layout Owerri</Text>
-        <Text className="email"><Icon as={MdEmail}  boxSize={4}/> RcnImo@gmail.com</Text>
+        <Text className="email"><Icon as={MdEmail}  boxSize={4}/> rcnimoofficial@gmail.com
+        </Text>
         <Text className='telnumber'><PhoneIcon /> +2348065438187 || +23409012273375</Text>
         </Box>
         <Box className="footer">
@@ -83,16 +85,17 @@ const Footer = () => {
                 </Link>
               </Box>
               <Box className="social">
-                <Link href="#">
-                <Icon as={IoLogoWhatsapp} boxSize={IconSize}/>
-                </Link>
-              </Box>
-              <Box className="social">
                 <Link href="https://t.me/RCN_IMO" target='_blank'>
                 <Icon as={SiTelegram} boxSize={IconSize} />
                 </Link>
               </Box>
            </Box>
+        </Box>
+      </Box>
+      <Box>
+        <Box className='copyRight'>
+          <Text> &#169; {date} Remnant Christain Network Imo </Text>
+          <Text>All Right Reserved</Text>
         </Box>
       </Box>
   </footer>
